@@ -136,9 +136,9 @@ export default () => {
         <ThreeColRow>
           <LogoContainer>
             <LogoImg src={LogoImage} />
-            <LogoText>TDoc Inc.</LogoText>
+            <LogoText>IDoc Inc.</LogoText>
           </LogoContainer>
-          <CopywrightNotice>&copy; 2020 TDoc Inc. All Rights Reserved.</CopywrightNotice>
+          <CopywrightNotice>&copy; 2020 IDoc Inc. All Rights Reserved.</CopywrightNotice>
           <SocialLinksContainer>
             <SocialLink href="https://facebook.com">
               <FacebookIcon />
