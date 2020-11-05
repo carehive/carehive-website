@@ -10,6 +10,7 @@ import MoreFeatures from "components/features/MoreFeatures"
 import Testimony from "components/Testimonial/BasicTestimony"
 import Faqs from "components/Faqs/BasicFaqs"
 import Cta from "components/Cta/BasicCta"
+import Footer from "components/Footer/BasicFooter"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
     <Testimony/>
     <Cta/>
     <Faqs/>
+    <Footer/>
   </AnimationRevealPage>
   );
 }
