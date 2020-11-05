@@ -25,10 +25,10 @@ const Image = styled.img(props => [
   props.imageShadow && tw`shadow`
 ]);
 
-const Subheading = tw(SubheadingBase)`text-center md:text-left`;
+const Subheading = tw(SubheadingBase)`text-center md:text-left text-green-300`;
 const Heading = tw(
   SectionHeading
-)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+)`mt-4 font-black text-green-500 text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
 const Description = tw.p`mt-6 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
 
 const TestimonialSlider = styled(Slider)`
@@ -44,7 +44,7 @@ const TestimonialSlider = styled(Slider)`
 const Testimonial = tw.div`outline-none h-full flex! flex-col`;
 const StarsContainer = styled.div``;
 const StarIcon = tw(StarIconBase)`inline-block w-5 h-5 text-orange-400 fill-current mr-1 last:mr-0`;
-const TestimonialHeading = tw.div`mt-4 text-xl font-bold`;
+const TestimonialHeading = tw.div`mt-4 text-xl font-bold text-green-600`;
 const Quote = tw.blockquote`mt-4 mb-8 sm:mb-10 leading-relaxed font-medium text-gray-700`;
 
 const CustomerInfoAndControlsContainer = tw.div`mt-auto flex justify-between items-center flex-col sm:flex-row`;
@@ -52,7 +52,7 @@ const CustomerInfoAndControlsContainer = tw.div`mt-auto flex justify-between ite
 const CustomerInfo = tw.div`flex flex-col sm:flex-row items-center justify-center lg:justify-start`;
 const CustomerProfilePicture = tw.img`rounded-full w-16 h-16 sm:w-20 sm:h-20`;
 const CustomerTextInfo = tw.div`text-center md:text-left sm:ml-6 mt-2 sm:mt-0`;
-const CustomerName = tw.h5`font-bold text-xl`;
+const CustomerName = tw.h5`font-bold text-xl text-green-400`;
 const CustomerTitle = tw.p`font-medium text-secondary-100`;
 
 const Controls = styled.div`
@@ -62,7 +62,7 @@ const Controls = styled.div`
   }
 `;
 const ControlButton = styled.button`
-  ${tw`mx-3 p-4 rounded-full transition duration-300 bg-gray-200 hover:bg-gray-300 text-primary-500 hover:text-primary-700 focus:outline-none focus:shadow-outline`}
+  ${tw`mx-3 p-4 rounded-full transition duration-300 bg-gray-200 hover:bg-gray-300 text-green-500 hover:text-green-700 focus:outline-none focus:shadow-outline`}
   svg {
     ${tw`w-4 h-4 stroke-3`}
   }

@@ -7,6 +7,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage"
 import Hero from "components/hero/BasicHero"
 import Features from "components/features/BasicFeatures"
 import MoreFeatures from "components/features/MoreFeatures"
+import Testimony from "components/Testimonial/BasicTestimony"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     <Hero />
     <Features/>
     <MoreFeatures/>
+    <Testimony/>
   </AnimationRevealPage>
   );
 }
