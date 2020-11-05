@@ -1,4 +1,6 @@
-import logo from './logo.svg';
+import "tailwindcss/dist/base.css";
+import "styles/globalStyles.css";
+import React from "react";
 import "style.css"
 import "tailwindcss/dist/base.css"
 import AnimationRevealPage from "helpers/AnimationRevealPage"
