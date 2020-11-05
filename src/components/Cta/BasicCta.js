@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import mockupImageSrc from "images/app-mockup.png"
+import mockupImageSrc from "images/app.png"
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-9.svg";
 import { ContentWithPaddingXl, Container as ContainerBase } from "components/misc/Layouts";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
@@ -36,7 +36,7 @@ const DecoratorBlob1 = tw(SvgDecoratorBlob1)`absolute bottom-0 left-0 w-80 h-80 
 const DecoratorBlob2 = tw(SvgDecoratorBlob1)`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-gray-800 opacity-50`
 export default ({
   subheading = "Download App",
-  text = "Developers all over the world are happily using Treact.",
+  text = "Doctors All over the world are using IDoc.",
   link1Text = "App Store",
   link1Url = "http://apple.com",
   link1IconSrc = appleIconImageSrc,

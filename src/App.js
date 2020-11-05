@@ -8,6 +8,8 @@ import Hero from "components/hero/BasicHero"
 import Features from "components/features/BasicFeatures"
 import MoreFeatures from "components/features/MoreFeatures"
 import Testimony from "components/Testimonial/BasicTestimony"
+import Faqs from "components/Faqs/BasicFaqs"
+import Cta from "components/Cta/BasicCta"
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
     <Features/>
     <MoreFeatures/>
     <Testimony/>
+    <Cta/>
+    <Faqs/>
   </AnimationRevealPage>
   );
 }
