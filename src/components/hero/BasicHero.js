@@ -44,7 +44,6 @@ export default ({
   primaryButtonUrl = "https://google.com",
   primaryButtonText = "Download App",
   buttonRounded = false,
-  features = ["Accurate Match making", "Qualified Doctors", "Fair Pricing"],
   testimonial = {
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     customerName: "Dr. Ebube UD",
@@ -74,14 +73,7 @@ export default ({
               <PrimaryButton as="a" href={primaryButtonUrl} css={buttonRoundedCss}>
                 {primaryButtonText}
               </PrimaryButton>
-              <FeatureList>
-                {features.map((feature, index) => (
-                  <Feature key={index}>
-                    <FeatureIcon />
-                    <FeatureText>{feature}</FeatureText>
-                  </Feature>
-                ))}
-              </FeatureList>
+             
             </TextColumn>
             <ImageColumn>
               <ImageContainer>
