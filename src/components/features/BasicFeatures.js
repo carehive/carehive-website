@@ -55,7 +55,7 @@ export default ({
     {
       imageSrc: ShieldIconImage,
       title: "Secure",
-      description: "We strictly only deal with vendors that provide top notch security.",
+      description: "Lorem ipsum donor amet siti ceali placeholder text",
       url: "https://timerse.com"
     },
     {
@@ -66,7 +66,7 @@ export default ({
     },
     {
       imageSrc: FastIconImage,
-      title: "Customizable",
+      title: "Fast",
       description: "Lorem ipsum donor amet siti ceali placeholder text",
       url: "https://reddit.com"
     }
