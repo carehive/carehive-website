@@ -9,6 +9,9 @@ import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
 import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";
 import FastIconImage from "images/fast-icon.svg";
+import SpecialistImage from "../../images/specialist.png";
+import MedicalRecordImage from "../../images/medical-record.png";
+import HealthMonitoringImage from "../../images/heart-rate.png";
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 
 const Heading = tw(SectionHeading)``;
@@ -54,27 +57,45 @@ export default ({
   cards = [
     {
       imageSrc: ShieldIconImage,
-      title: "Secure",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
+      title: "Telemedical services",
+      description: "Access to healthcare services directly from your phone",
       url: "https://timerse.com"
     },
     {
       imageSrc: SupportIconImage,
-      title: "24/7 Support",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
+      title: "Therapy scheduling",
+      description: "Create schedules at your convenience",
       url: "https://google.com"
     },
     {
       imageSrc: FastIconImage,
-      title: "Fast",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
+      title: "Remote health service delivery",
+      description: "Bridging the barrier of distance to provide quality service",
       url: "https://reddit.com"
-    }
+    },
+    {
+      imageSrc: HealthMonitoringImage,
+      title: "Personalized health monitoring",
+      description: "Monitor health indices without stepping into a hospital",
+      url: "https://reddit.com"
+    },
+    {
+      imageSrc: MedicalRecordImage,
+      title: "Medical records keeping",
+      description: "View your medical records on the go",
+      url: "https://reddit.com"
+    },
+    {
+      imageSrc: SpecialistImage,
+      title: "Access to over 100+ healthcare specialists across all medical fields",
+      description: "Quality services from our ever growing list of medical professionals at anytime",
+      url: "https://reddit.com"
+    },
   ],
   linkText = "Learn More",
   heading = "Amazing Features",
   subheading = "Features",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description = "Our impressive range of services includes",
   imageContainerCss = null,
   imageCss = null
 }) => {
@@ -94,18 +115,18 @@ export default ({
         <ThreeColumnContainer>
           {cards.map((card, i) => (
             <Column key={i}>
-              <Card href={card.url}>
+              <Card>
                 <span className="imageContainer" css={imageContainerCss}>
                   <img src={card.imageSrc} alt="" css={imageCss} />
                 </span>
                 <span className="title">{card.title}</span>
                 <p className="description">{card.description}</p>
-                {linkText && (
+                {/*linkText && (
                   <span className="link">
                     <span>{linkText}</span>
                     <ArrowRightIcon className="icon" />
                   </span>
-                )}
+                )*/}
               </Card>
             </Column>
           ))}

@@ -38,26 +38,21 @@ const CustomerCompany = tw.p`mt-1 text-sm text-gray-300`
 
 export default ({
   heading = "Connect with Medical Professionals.",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+  description = "Get affordable, efficient and responsive healthcare services ranging from medical consultations to routine checkups to emergency response to lifestyle guidance and more.",
   imageSrc = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
   imageDecoratorBlob = true,
-  primaryButtonUrl = "https://google.com",
-  primaryButtonText = "Download App",
+  primaryButtonUrl = "#getEarlyAccess",
+  primaryButtonText = "Get Early Access",
   buttonRounded = false,
   testimonial = {
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    quote: "We at care Hive believe that access to health care services should be personalizable and convenient in such a way as to accommodate our different needs and preferences.",
     customerName: "Dr. Ebube UD",
-    customerCompany: "Quivar Games."
+    customerCompany: "CareHive."
   }
 }) => {
   const buttonRoundedCss = buttonRounded && tw`rounded-full`;
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#">Testimonials</NavLink>
     </NavLinks>,
    
   ];

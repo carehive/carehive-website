@@ -49,8 +49,27 @@ const SocialLink = styled.a`
 export default () => {
   return (
     <Container>
-      <Content>
-        <SixColumns>
+    <Content>
+    <ThreeColRow>
+      <LogoContainer>
+        <LogoImg src={LogoImage} />
+        <LogoText>CareHive</LogoText>
+      </LogoContainer>
+      <CopywrightNotice>&copy; 2021 CareHive Africa. All Rights Reserved.</CopywrightNotice>
+      <SocialLinksContainer>
+        <SocialLink href="https://facebook.com">
+          <FacebookIcon />
+        </SocialLink>
+        <SocialLink href="https://twitter.com">
+          <TwitterIcon />
+        </SocialLink>
+        <SocialLink href="https://youtube.com">
+          <YoutubeIcon />
+        </SocialLink>
+      </SocialLinksContainer>
+    </ThreeColRow>
+    </Content>
+        {/*<SixColumns>
           <Column>
             <ColumnHeading>Main</ColumnHeading>
             <LinkList>
@@ -138,7 +157,7 @@ export default () => {
             <LogoImg src={LogoImage} />
             <LogoText>CareHive</LogoText>
           </LogoContainer>
-          <CopywrightNotice>&copy; 2020 CareHive Africa. All Rights Reserved.</CopywrightNotice>
+          <CopywrightNotice>&copy; 2021 CareHive Africa. All Rights Reserved.</CopywrightNotice>
           <SocialLinksContainer>
             <SocialLink href="https://facebook.com">
               <FacebookIcon />
@@ -151,7 +170,7 @@ export default () => {
             </SocialLink>
           </SocialLinksContainer>
         </ThreeColRow>
-      </Content>
+      </Content>*/}
     </Container>
   );
 };

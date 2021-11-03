@@ -38,6 +38,9 @@ const Description = tw.p`mt-8 text-center md:text-left text-sm md:text-base lg:t
 
 const Features = tw.div`mx-auto md:mx-0 flex flex-col lg:flex-row max-w-xs lg:max-w-none`;
 const Feature = tw.div`mt-10 lg:mt-8 flex items-center md:items-start flex-col md:mr-8 last:mr-0`;
+const SubscribeForm = tw.form`mt-4 lg:mt-6 text-sm sm:flex max-w-xs sm:max-w-none mx-auto sm:mx-0`;
+const Input = tw.input`bg-gray-300 px-6 py-3 rounded sm:rounded-r-none border-2 sm:border-r-0 border-gray-400 hover:border-primary-500 focus:outline-none transition duration-300 w-full`;
+const SubscribeButton = tw(PrimaryButtonBase)`mt-4 sm:mt-0 w-full sm:w-auto rounded sm:rounded-l-none px-8 py-3`;
 
 const FeatureHeadingContainer = tw.div`flex items-center`;
 const FeatureIconContainer = styled.div`
@@ -60,10 +63,10 @@ const PrimaryButton = styled(PrimaryButtonBase)(props => [
 ]);
 
 export default ({
-  subheading = "Expertise",
+  subheading = "Get Early Access",
   heading = (
     <>
-      Designed & Developed by <span tw="text-green-500">Professionals.</span>
+      Be the first to know when we launch <p tw="text-green-500">Sign Up!</p> 
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -105,7 +108,7 @@ export default ({
   if (!features) features = defaultFeatures;
 
   return (
-    <Container>
+    <Container id='getEarlyAccess'>
       <TwoColumn>
         <ImageColumn>
           <Image src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
@@ -115,7 +118,7 @@ export default ({
           <TextContent>
             <Subheading>{subheading}</Subheading>
             <Heading>{heading}</Heading>
-            <Description>{description}</Description>
+            {/*<Description>{description}</Description>
             <Features>
               {features.map((feature, index) => (
                 <Feature key={index}>
@@ -134,9 +137,13 @@ export default ({
               ))}
             </Features>
 
-            <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
+            {/*<PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
               {primaryButtonText}
-            </PrimaryButton>
+              </PrimaryButton>*/}
+            <SubscribeForm method="get" action="#">
+              <Input type="email" placeholder="Your Email Address" />
+              <SubscribeButton type="submit">Get&nbsp;Early&nbsp;Access</SubscribeButton>
+            </SubscribeForm>
           </TextContent>
         </TextColumn>
       </TwoColumn>

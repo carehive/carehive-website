@@ -11,6 +11,7 @@ import Testimony from "components/Testimonial/BasicTestimony"
 import Faqs from "components/Faqs/BasicFaqs"
 import Cta from "components/Cta/BasicCta"
 import Footer from "components/Footer/BasicFooter"
+import Subscription from "components/Waitlist/subscription"
 
 function App() {
   return (
@@ -18,9 +19,9 @@ function App() {
     <Hero />
     <Features/>
     <MoreFeatures/>
-    <Testimony/>
+    {/*<Testimony/>
     <Cta/>
-    <Faqs/>
+    <Faqs/>*/}
     <Footer/>
   </AnimationRevealPage>
   );
