@@ -8,8 +8,9 @@ import TeamIllustrationSrc from "images/team-illustration-2.svg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
 import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-8.svg";
 
-const Container = tw.div`relative`;
+const Container = tw.div`relative -mx-8`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-6/12 flex-shrink-0 relative`;
@@ -24,9 +25,9 @@ const Image = styled.img(props => [
   props.imageShadow && tw`shadow`
 ]);
 
-const DecoratorBlob = tw(
-  SvgDotPattern
-)`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10`;
+// const DecoratorBlob = tw(
+//   SvgDotPattern
+// )`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10`;
 
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 
@@ -54,6 +55,13 @@ const FeatureIconContainer = styled.div`
   }
 `;
 const FeatureHeading = tw.div`ml-3 font-bold text-xl`;
+const DecoratorBlob = styled(SvgDecoratorBlob3)`
+  ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-5 transform translate-x-16 translate-y-32`}
+`;
+
+const DecoratorsBlob = styled(SvgDecoratorBlob3)`
+  ${tw`pointer-events-none absolute left-0 top-0 w-64 opacity-5 transform translate-x-1 translate-y-0`}
+`;
 
 const FeatureDescription = tw.div`mt-4 text-center md:text-left text-gray-600 leading-relaxed`;
 
@@ -109,11 +117,17 @@ export default ({
 
   return (
     <Container id='getEarlyAccess'>
+    <DecoratorsBlob />
       <TwoColumn>
-        <ImageColumn>
+      <DecoratorBlob />
+      <SubscribeForm method="get" action="#">
+        <Input type="email" placeholder="Your Email Address" />
+        <SubscribeButton type="submit">Get&nbsp;Early&nbsp;Access</SubscribeButton>
+      </SubscribeForm>
+        {/*<ImageColumn>
           <Image src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
           {showDecoratorBlob && <DecoratorBlob />}
-        </ImageColumn>
+        </ImageColumn>*/}
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
             <Subheading>{subheading}</Subheading>
@@ -139,11 +153,11 @@ export default ({
 
             {/*<PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
               {primaryButtonText}
-              </PrimaryButton>*/}
+              </PrimaryButton>
             <SubscribeForm method="get" action="#">
               <Input type="email" placeholder="Your Email Address" />
               <SubscribeButton type="submit">Get&nbsp;Early&nbsp;Access</SubscribeButton>
-            </SubscribeForm>
+            </SubscribeForm>*/}
           </TextContent>
         </TextColumn>
       </TwoColumn>

@@ -37,9 +37,9 @@ const CustomerCompany = tw.p`mt-1 text-sm text-gray-300`
 
 
 export default ({
-  heading = "Connect with Medical Professionals.",
+  heading = "Convenient and premium health care services for you.",
   description = "Get affordable, efficient and responsive healthcare services ranging from medical consultations to routine checkups to emergency response to lifestyle guidance and more.",
-  imageSrc = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+  imageSrc = "https://images.unsplash.com/photo-1584463623578-37726932ba2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
   imageDecoratorBlob = true,
   primaryButtonUrl = "#getEarlyAccess",
   primaryButtonText = "Get Early Access",
@@ -77,8 +77,8 @@ export default ({
                 <Testimonial>
                   <QuotesLeftIcon/>
                   <Quote>{testimonial.quote}</Quote>
-                  <CustomerName>{testimonial.customerName}</CustomerName>
-                  <CustomerCompany>{testimonial.customerCompany}</CustomerCompany>
+                  {/*<CustomerName>{testimonial.customerName}</CustomerName>
+  <CustomerCompany>{testimonial.customerCompany}</CustomerCompany>*/}
                 </Testimonial>
               </ImageContainer>
               <Offsetbackground />

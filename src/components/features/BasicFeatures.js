@@ -63,14 +63,14 @@ export default ({
     },
     {
       imageSrc: SupportIconImage,
-      title: "Therapy scheduling",
-      description: "Create schedules at your convenience",
+      title: "Scheduling Medical consultations",
+      description: "Easily fix appointments with specialists and recieve reminders",
       url: "https://google.com"
     },
     {
       imageSrc: FastIconImage,
       title: "Remote health service delivery",
-      description: "Bridging the barrier of distance to provide quality service",
+      description: "First aid, lab sample collection and delivery results, and other Health care services brought to you at your home, office, school,..etc at your convenience",
       url: "https://reddit.com"
     },
     {
@@ -82,7 +82,7 @@ export default ({
     {
       imageSrc: MedicalRecordImage,
       title: "Medical records keeping",
-      description: "View your medical records on the go",
+      description: "Have your medical records on the go",
       url: "https://reddit.com"
     },
     {
@@ -93,7 +93,7 @@ export default ({
     },
   ],
   linkText = "Learn More",
-  heading = "Amazing Features",
+  heading = "Our Services",
   subheading = "Features",
   description = "Our impressive range of services includes",
   imageContainerCss = null,
