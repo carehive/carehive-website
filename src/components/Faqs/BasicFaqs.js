@@ -41,8 +41,13 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 export default ({
   subheading = "FAQS",
   heading = "You have Questions ?",
-  description = "And we have got answers to all of them. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description = "And we have got answers to all of them.",
   faqs = [
+    {
+      question: "Who is behind this?",
+      answer:
+        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+    },
     {
       question: "How long is a consultation section ?",
       answer:
@@ -52,6 +57,11 @@ export default ({
       question: "Can I cancel appointments ?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+      question: "How can I reach out?",
+      answer:
+        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
     },
     {
       question: "Do I get a refund when I cancel appointments ?",
@@ -77,7 +87,7 @@ export default ({
       <ContentWithPaddingXl>
         <Column>
           <HeaderContent>
-            {subheading && <Subheading>{subheading}</Subheading>}
+            {/*subheading && <Subheading>{subheading}</Subheading>*/}
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
           </HeaderContent>
@@ -120,7 +130,7 @@ export default ({
           </FAQSContainer>
         </Column>
       </ContentWithPaddingXl>
-      <DecoratorBlob1/>
+      
       <DecoratorBlob2 />
     </Container>
   );

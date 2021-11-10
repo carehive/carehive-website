@@ -55,17 +55,17 @@ export default () => {
         <LogoImg src={LogoImage} />
         <LogoText>CareHive</LogoText>
       </LogoContainer>
-      <CopywrightNotice>&copy; 2021 CareHive Africa. All Rights Reserved.</CopywrightNotice>
+      <CopywrightNotice>&copy; 2021 CareHive. All Rights Reserved.</CopywrightNotice>
       <SocialLinksContainer>
-        <SocialLink href="https://facebook.com">
+        {/*<SocialLink href="https://facebook.com">
           <FacebookIcon />
-        </SocialLink>
-        <SocialLink href="https://twitter.com">
+  </SocialLink>*/}
+        <SocialLink href="https://twitter.com/thecarehive">
           <TwitterIcon />
         </SocialLink>
-        <SocialLink href="https://youtube.com">
+        {/*<SocialLink href="https://youtube.com">
           <YoutubeIcon />
-        </SocialLink>
+</SocialLink>*/}
       </SocialLinksContainer>
     </ThreeColRow>
     </Content>

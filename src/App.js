@@ -20,8 +20,8 @@ function App() {
     <Features/>
     <MoreFeatures/>
     {/*<Testimony/>
-    <Cta/>
-    <Faqs/>*/}
+    <Cta/>*/}
+    <Faqs/>
     <Footer/>
   </AnimationRevealPage>
   );

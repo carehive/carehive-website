@@ -10,6 +10,7 @@ import { Container, ContentWithVerticalPadding } from "components/misc/Layouts.j
 import { ReactComponent as CheckboxIcon } from "feather-icons/dist/icons/check-circle.svg";
 import { ReactComponent as QuotesLeftIconBase } from "images/quotes-l.svg"
 import { ReactComponent as SvgDecoratorBlob1 } from "images/dot-pattern.svg"
+import { SliderButton } from "@typeform/embed-react";
 
 const Header = tw(HeaderBase)`max-w-none`;
 const Row = tw.div`flex flex-col lg:flex-row justify-between items-center lg:pt-16 max-w-screen-2xl mx-auto sm:px-8`;
@@ -34,14 +35,15 @@ const QuotesLeftIcon = tw(QuotesLeftIconBase)`w-16 h-16 md:w-12 md:h-12 absolute
 const Quote = tw.blockquote``
 const CustomerName = tw.p`mt-4 font-bold`
 const CustomerCompany = tw.p`mt-1 text-sm text-gray-300`
-
-
+//https://images.pexels.com/photos/6098065/pexels-photo-6098065.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
+//https://images.unsplash.com/photo-1579165466949-3180a3d056d5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c21pbGluZyUyMGJsYWNrJTIwbWVkaWNhbCUyMGRvY3RvcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60
+//<button data-tf-slider="vyw0LRNz" data-tf-width="550" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:22px;border-radius:27px;padding:0 36px;font-weight:bold;height:55px;cursor:pointer;line-height:55px;text-align:center;margin:0;text-decoration:none;">Launch me</button><script src="//embed.typeform.com/next/embed.js"></script>
 export default ({
   heading = "Convenient and premium health care services for you.",
   description = "Get affordable, efficient and responsive healthcare services ranging from medical consultations to routine checkups to emergency response to lifestyle guidance and more.",
-  imageSrc = "https://images.unsplash.com/photo-1584463623578-37726932ba2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  imageSrc = "https://images.pexels.com/photos/6098065/pexels-photo-6098065.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
   imageDecoratorBlob = true,
-  primaryButtonUrl = "#getEarlyAccess",
+  primaryButtonUrl = "https://zzc4y9hv6oi.typeform.com/to/vyw0LRNz",
   primaryButtonText = "Get Early Access",
   buttonRounded = false,
   testimonial = {
@@ -65,10 +67,11 @@ export default ({
             <TextColumn>
               <Heading>{heading}</Heading>
               <Description>{description}</Description>
-              <PrimaryButton as="a" href={primaryButtonUrl} css={buttonRoundedCss}>
-                {primaryButtonText}
-              </PrimaryButton>
-             
+              <SliderButton id="vyw0LRNz" style={{ padding: 10, fontSize: 14, outline: 'none' }} width={600} position="right">
+                <PrimaryButton as="a" css={buttonRoundedCss}>
+                  {primaryButtonText}
+                </PrimaryButton>
+              </SliderButton>
             </TextColumn>
             <ImageColumn>
               <ImageContainer>
