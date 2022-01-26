@@ -120,7 +120,7 @@ const buttonRoundedCss = buttonRounded && tw`rounded-full`;
   if (!features) features = defaultFeatures;
 
   return (
-    <Container style={{backgroundColor: '#E9F9F0'}}>
+    <Container style={{backgroundColor: '#EDFFFF'}}>
       <ContentWithPaddingXl>
       <DecoratorsBlob />
       <DecoratorBlob />
