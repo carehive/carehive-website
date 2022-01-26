@@ -8,8 +8,9 @@ import LogoImage from "images/logo.png";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
+import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-31.svg";
 
-const Container = tw.div`relative bg-gray-200 text-gray-700 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
+const Container = tw.div`relative text-gray-700 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
 const SixColumns = tw.div`flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12`;
 
@@ -38,6 +39,15 @@ const LogoText = tw.h5`ml-2 text-xl font-black tracking-wider text-gray-800`;
 
 const CopywrightNotice = tw.p`text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-500`;
 
+const DecoratorBlob = styled(SvgDecoratorBlob3)`
+  ${tw`pointer-events-none absolute left-0 bottom-0 w-72 opacity-25 transform translate-x-1 translate-y-64 mr-80`}
+`;
+
+const TopDecoratorBlob = styled(SvgDecoratorBlob3)`
+  ${tw`pointer-events-none absolute right-0 top-0 w-72 h-64 opacity-25 transform translate-x-24 translate-y-64`}
+`;
+
+
 const SocialLinksContainer = tw.div`mt-8 md:mt-0 flex`;
 const SocialLink = styled.a`
   ${tw`cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0`}
@@ -48,97 +58,76 @@ const SocialLink = styled.a`
 
 export default () => {
   return (
-    <Container>
-    <Content>
-    <ThreeColRow>
-      <LogoContainer>
-        <LogoImg src={LogoImage} />
-        <LogoText>CareHive</LogoText>
-      </LogoContainer>
-      <CopywrightNotice>&copy; 2021 CareHive. All Rights Reserved.</CopywrightNotice>
-      <SocialLinksContainer>
-        {/*<SocialLink href="https://facebook.com">
-          <FacebookIcon />
-  </SocialLink>*/}
-        <SocialLink href="https://twitter.com/thecarehive">
-          <TwitterIcon />
-        </SocialLink>
-        {/*<SocialLink href="https://youtube.com">
-          <YoutubeIcon />
-</SocialLink>*/}
-      </SocialLinksContainer>
-    </ThreeColRow>
-    </Content>
-        {/*<SixColumns>
+    <Container style={{backgroundColor: '#F5FFFF'}}>
+      <Content>
+        <SixColumns style={{textAlign: 'center'}}>
           <Column>
-            <ColumnHeading>Main</ColumnHeading>
+            <ColumnHeading>Our Solutions</ColumnHeading>
             <LinkList>
+              <LinkListItem>
+                <Link href="#">For providers</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">For Patients</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">For Partners</Link>
+              </LinkListItem>
+              {/*<LinkListItem>
+                <Link href="#">About Us</Link>
+              </LinkListItem>*/}
+            </LinkList>
+          </Column>
+          <Column>
+            <ColumnHeading>Our Product</ColumnHeading>
+            <LinkList>
+              <LinkListItem>
+                <Link href="#">Remote Health service delivery</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Personalized Health Monitoring</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Telemedicine services</Link>
+              </LinkListItem>
+              {/*<LinkListItem>
+                <Link href="#">About Us</Link>
+              </LinkListItem>*/}
+            </LinkList>
+          </Column>
+          <Column>
+            <ColumnHeading>Company</ColumnHeading>
+            <LinkList>
+              <LinkListItem>
+                <Link href="#">About</Link>
+              </LinkListItem>
               <LinkListItem>
                 <Link href="#">Blog</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">FAQs</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Support</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">About Us</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
-          <Column>
-            <ColumnHeading>Product</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">Log In</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Personal</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Business</Link>
-              </LinkListItem>
-              <LinkListItem>
                 <Link href="#">Team</Link>
               </LinkListItem>
+              {/*<LinkListItem>
+                <Link href="#">About Us</Link>
+              </LinkListItem>*/}
             </LinkList>
           </Column>
           <Column>
-            <ColumnHeading>Press</ColumnHeading>
+            <ColumnHeading>Contact</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">Logos</Link>
+                <Link href="#">25 Bentlane Viva Estate, Enugu, Nigeria.</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Events</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Stories</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Office</Link>
+                <SocialLinksContainer>
+                  <SocialLink style={{margin: 'auto', backgroundColor: '#1DA1F2'}} href="https://twitter.com">
+                    <TwitterIcon />
+                  </SocialLink>
+                </SocialLinksContainer>
               </LinkListItem>
             </LinkList>
           </Column>
-          <Column>
-            <ColumnHeading>Legal</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">GDPR</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Privacy Policy</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Terms of Service</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Disclaimer</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
-          <SubscribeNewsletterColumn>
+          {/*<SubscribeNewsletterColumn>
             <SubscribeNewsletterContainer>
               <ColumnHeading>Subscribe to our Newsletter</ColumnHeading>
               <SubscribeText>
@@ -149,16 +138,17 @@ export default () => {
                 <SubscribeButton type="submit">Subscribe</SubscribeButton>
               </SubscribeForm>
             </SubscribeNewsletterContainer>
-          </SubscribeNewsletterColumn>
+          </SubscribeNewsletterColumn>*/}
         </SixColumns>
-        <Divider />
-        <ThreeColRow>
-          <LogoContainer>
+        {/*<Divider />*/}
+        
+        <ThreeColRow style={{margin: '8rem 0rem 0rem 0rem'}}>
+          {/*<LogoContainer>
             <LogoImg src={LogoImage} />
             <LogoText>CareHive</LogoText>
-          </LogoContainer>
-          <CopywrightNotice>&copy; 2021 CareHive Africa. All Rights Reserved.</CopywrightNotice>
-          <SocialLinksContainer>
+          </LogoContainer>*/}
+          <CopywrightNotice style={{margin: 'auto'}}>&copy; 2022 CareHive Africa. All Rights Reserved.</CopywrightNotice>
+          {/*<SocialLinksContainer>
             <SocialLink href="https://facebook.com">
               <FacebookIcon />
             </SocialLink>
@@ -168,9 +158,11 @@ export default () => {
             <SocialLink href="https://youtube.com">
               <YoutubeIcon />
             </SocialLink>
-          </SocialLinksContainer>
+          </SocialLinksContainer>*/}
         </ThreeColRow>
-      </Content>*/}
+      </Content>
+      <DecoratorBlob/>
+      <TopDecoratorBlob/>
     </Container>
   );
 };
