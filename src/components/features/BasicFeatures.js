@@ -17,7 +17,7 @@ import FastIconImage from "images/fast-icon.svg";
 import SpecialistImage from "../../images/specialist.png";
 import MedicalRecordImage from "../../images/medical-record.png";
 import HealthMonitoringImage from "../../images/heart-rate.png";
-import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
+import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-31.svg";
 
 const Heading = tw(SectionHeading)``;
 const Subheading = tw(SubheadingBase)`text-center mb-3 text-green-300`;
@@ -28,6 +28,10 @@ const ThreeColumnContainer = styled.div`
 const Column = styled.div`
   ${tw`lg:w-1/2 `} //max-w-xs
 `;
+
+const Underline = styled.div`
+  ${tw`w-56 h-px bg-gray-900 mx-auto`}
+`
 
 const Card = styled.a`
   ${tw`flex flex-row items-start text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105`} //flex flex-row items-center text-center h-full mx-4 px-4 py-8 rounded
@@ -55,7 +59,11 @@ const Card = styled.a`
 `;
 
 const DecoratorBlob = styled(SvgDecoratorBlob3)`
-  ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-40`}
+  ${tw`pointer-events-none absolute left-0 bottom-0 w-64 opacity-25 transform translate-x-64 translate-y-0 mb-10 ml-24`}
+`;
+
+const TopDecoratorBlob = styled(SvgDecoratorBlob3)`
+  ${tw`pointer-events-none absolute right-0 top-0 w-72 h-64 opacity-25 transform translate-x-32 translate-y-0`}
 `;
 
 export default ({
@@ -113,9 +121,11 @@ export default ({
    */
   return (
     <Container>
+      <TopDecoratorBlob />
       <ContentWithPaddingXl>
         {/*subheading && <Subheading>{subheading}</Subheading>*/}
         {heading && <Heading>{heading}</Heading>}
+        <Underline/>
         {/*description && <Description>{description}</Description>*/}
         <ThreeColumnContainer>
           {cards.map((card, i) => (
