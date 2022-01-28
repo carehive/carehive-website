@@ -19,23 +19,23 @@ const Container = tw(ContainerBase)`bg-designs -mx-8`
 const Row = tw.div`flex flex-col lg:flex-row justify-between items-center lg:pt-16 max-w-screen-2xl mx-auto sm:px-8`;
 const Column = tw.div``;
 const TextColumn = tw(Column)`mr-auto lg:mr-0 max-w-lg lg:max-w-xl xl:max-w-2xl`;
-const Heading = tw(SectionHeading)`text-left text-green-500 leading-snug xl:text-6xl`;
-const Description = tw(SectionDescription)`mt-4 lg:text-base text-gray-700 max-w-lg`;
+const Heading = tw(SectionHeading)`max-w-xl text-left text-green-500 leading-snug xl:text-6xl`;
+const Description = tw(SectionDescription)`mt-4 lg:text-base text-gray-700 max-w-lg max-w-2xl`;
 const PrimaryButton = tw(PrimaryButtonBase)`mt-8 inline-block w-56 tracking-wide text-center py-5`;
 const FeatureList = tw.ul`mt-12 leading-loose`;
 const Feature = tw.li`flex items-center`;
 const FeatureIcon = tw(CheckboxIcon)`w-5 h-5 text-green-500`;
 const FeatureText = tw.p`ml-2 font-medium text-gray-700`;
 const ImageColumn = tw(Column)`ml-auto lg:mr-0 relative mt-16 lg:mt-0 lg:ml-32`;
-const ImageContainer = tw.div`relative z-40 transform xl:-translate-x-24 xl:-translate-y-16`;
-const Image = tw.img`max-w-full  rounded-t sm:rounded relative z-20`; //w-96
+const ImageContainer = tw.div`relative z-40 transform xl:-translate-x-12 xl:-translate-y-16`;
+const Image = tw.img`max-w-2xl  rounded-t sm:rounded relative z-20`; //w-96
 const Offsetbackground = tw.div`absolute inset-0  rounded xl:-mb-8` //bg-green-100
 const ImageDecoratorBlob = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none z-10 absolute right-0 bottom-0 transform translate-x-10 translate-y-10 h-32 w-32 opacity-25 text-gray-900 fill-current`}
 `;
-const Testimonial = tw.div`max-w-sm rounded-b md:rounded-none relative sm:absolute bottom-0 inset-x-0 z-20 px-8 py-6 sm:px-10 sm:py-8 text-gray-900 font-medium transform md:-translate-x-32 text-sm leading-relaxed md:-mr-16 xl:mr-0` //bg-green-400
-const QuotesLeftIcon = tw(QuotesLeftIconBase)`w-16 h-16 md:w-12 md:h-12 absolute top-0 left-0 text-gray-100 md:text-red-500 transform translate-x-1 md:-translate-x-1/2 md:-translate-y-5 opacity-10 md:opacity-100`
-const Quote = tw.blockquote`left-0`
+const Testimonial = tw.div`max-w-lg rounded-b md:rounded-none relative sm:absolute bottom-0 inset-x-0 z-20 px-8 py-6 sm:px-10 sm:py-8 text-gray-900 font-medium transform md:translate-x-32 md:translate-y-24 text-sm leading-relaxed md:-mr-16 xl:mr-0` //bg-green-400
+const QuotesLeftIcon = tw(QuotesLeftIconBase)`w-8 h-8 md:w-4 md:h-4 absolute top-auto left-0 text-gray-100 md:text-blue-500 transform translate-x-1  md:-translate-y-5 opacity-10 md:opacity-100` //md:-translate-x-1/2
+const Quote = tw.blockquote`right-0`
 const CustomerName = tw.p`mt-4 font-bold`
 const CustomerCompany = tw.p`mt-1 text-sm text-gray-300`
 //https://images.pexels.com/photos/6098065/pexels-photo-6098065.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
@@ -81,7 +81,7 @@ export default ({
             <TextColumn>
               <Heading>{heading}</Heading>
               <Description>{description}</Description>
-              <SliderButton id="vyw0LRNz" style={{ padding: 10, fontSize: 14, outline: 'none' }} width={600} position="right">
+              <SliderButton id="vyw0LRNz" style={{ padding: '10 0', fontSize: 14, outline: 'none' }} width={600} position="right">
                 <PrimaryButton as="a" css={buttonRoundedCss}>
                   {primaryButtonText}
                 </PrimaryButton>
@@ -95,7 +95,7 @@ export default ({
                   <QuotesLeftIcon/>
                   <Quote>{testimonial.quote}</Quote>
                   {/*<CustomerName>{testimonial.customerName}</CustomerName>
-  <CustomerCompany>{testimonial.customerCompany}</CustomerCompany>*/}
+                  <CustomerCompany>{testimonial.customerCompany}</CustomerCompany>*/}
                 </Testimonial>
               </ImageContainer>
               <Offsetbackground />

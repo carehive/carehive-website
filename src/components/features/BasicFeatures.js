@@ -17,7 +17,7 @@ import FastIconImage from "images/fast-icon.svg";
 import SpecialistImage from "../../images/specialist.png";
 import MedicalRecordImage from "../../images/medical-record.png";
 import HealthMonitoringImage from "../../images/heart-rate.png";
-import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-31.svg";
+import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 
 const Heading = tw(SectionHeading)``;
 const Subheading = tw(SubheadingBase)`text-center mb-3 text-green-300`;
@@ -59,7 +59,7 @@ const Card = styled.a`
 `;
 
 const DecoratorBlob = styled(SvgDecoratorBlob3)`
-  ${tw`pointer-events-none absolute left-0 bottom-0 w-64 opacity-25 transform translate-x-64 translate-y-0 mb-10 ml-24`}
+  ${tw`pointer-events-none absolute left-0 bottom-0 w-64 opacity-25 transform translate-x-48 -translate-y-48 pb-10 ml-24 z-auto`}
 `;
 
 const TopDecoratorBlob = styled(SvgDecoratorBlob3)`
