@@ -12,10 +12,10 @@ import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
 const Header = tw.header`
   flex justify-between items-center
-  max-w-screen-xl mx-auto
-`;
+  max-w-screen-xl  
+`;//mx-auto
 
-export const NavLinks = tw.div`inline-block`;
+export const NavLinks = tw.div`inline-block lg:mx-12`;
 
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
@@ -23,7 +23,7 @@ export const NavLinks = tw.div`inline-block`;
 export const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-green-500 hocus:text-green-500
+  pb-1 border-b-2 border-transparent hover:border-green-500 hocus:text-green-500  cursor-pointer
 `;
 
 export const PrimaryLink = tw(NavLink)`
@@ -34,7 +34,7 @@ export const PrimaryLink = tw(NavLink)`
 `;
 
 export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
+  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0! xl:pl-10`};
 
   img {
     ${tw`w-10 mr-3`}
@@ -109,7 +109,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
         </MobileNavLinks>
         <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
           {showNavLinks ? <CloseIcon tw="w-6 h-6" /> : <MenuIcon tw="w-6 h-6" />}
-        </NavToggle>*
+        </NavToggle>
       </MobileNavLinksContainer>
     </Header>
   );

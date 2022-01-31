@@ -13,7 +13,8 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       designs: 'rgba(147, 228, 133, 0.05)',
-      blob: 'rgba(133, 228, 217, 0.15)',
+      designs1: '#EDFFFF',
+      designs2: '#DBF1F2',
 
       black: '#000',
       white: '#fff',

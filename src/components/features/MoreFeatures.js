@@ -13,7 +13,7 @@ import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-8
 import { SliderButton } from "@typeform/embed-react";
 
 // const Container = tw.div`relative -mx-8`;
-const Container = tw(ContainerBase)`bg-gray-900 -mx-8`
+const Container = tw(ContainerBase)`bg-designs1 -mx-8 p-8`
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-6/12 flex-shrink-0 relative`;
@@ -120,7 +120,7 @@ const buttonRoundedCss = buttonRounded && tw`rounded-full`;
   if (!features) features = defaultFeatures;
 
   return (
-    <Container style={{backgroundColor: '#EDFFFF'}}>
+    <Container>
       <ContentWithPaddingXl>
       <DecoratorsBlob />
       <DecoratorBlob />

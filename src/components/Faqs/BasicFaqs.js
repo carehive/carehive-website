@@ -15,9 +15,9 @@ const Subheading = tw(SubheadingBase)`mb-4 text-center text-green-600`;
 const Heading = tw(SectionHeading)`w-full`;
 const Description = tw(SectionDescription)`w-full text-center`;
 
-const Column = tw.div`flex flex-col items-center`;
+const Column = tw.div`flex flex-col items-center px-2`;
 const HeaderContent = tw.div``;
-const Container = tw(ContainerBase)`bg-gray-900 -mx-8`
+const Container = tw(ContainerBase)`bg-designs2 -mx-8 p-8`
 
 const FAQSContainer = tw.dl`mt-12 max-w-4xl relative`;
 const FAQ = tw.div`cursor-pointer select-none mt-5 px-8 sm:px-10 py-5 sm:py-4 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-green-300 transition duration-300`;
