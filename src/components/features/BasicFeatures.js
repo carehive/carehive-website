@@ -34,12 +34,16 @@ const Underline = styled.div`
 `
 
 const Card = styled.a`
-  ${tw`flex flex-row items-start text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105`} //flex flex-row items-center text-center h-full mx-4 px-4 py-8 rounded
+  ${tw`flex flex-col items-center mx-0 md:flex-row md:items-start text-center h-full md:mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105`} //flex flex-row items-center text-center h-full mx-4 px-4 py-8 rounded
   .imageContainer {
-    ${tw`text-center rounded-full`} //bg-gray-100
+    ${tw`text-center rounded-full pt-4 md:pt-0`} //bg-gray-100
     img {
-      ${tw`max-w-full text-green-500 pl-4`}
+      ${tw`max-w-full text-green-500 md:pl-4`}
     }
+  }
+
+  .textContainer {
+    ${tw`md:w-72`}
   }
 
   .title {
@@ -59,7 +63,7 @@ const Card = styled.a`
 `;
 
 const DecoratorBlob = styled(SvgDecoratorBlob3)`
-  ${tw`pointer-events-none absolute left-0 bottom-0 w-64 opacity-25 transform translate-x-48 -translate-y-48 pb-10 ml-24 z-auto`}
+  ${tw`pointer-events-none absolute left-0 bottom-0 w-64 opacity-25 transform translate-x-48 -translate-y-48 pb-10 ml-24 z-auto `}
 `;
 
 const TopDecoratorBlob = styled(SvgDecoratorBlob3)`
@@ -120,7 +124,7 @@ export default ({
    *  4) url - the url that the card should goto on click
    */
   return (
-    <Container>
+    <Container id="products">
       <TopDecoratorBlob />
       <ContentWithPaddingXl>
         {/*subheading && <Subheading>{subheading}</Subheading>*/}
@@ -131,7 +135,7 @@ export default ({
           {cards.map((card, i) => (
             <Column key={i}>
               <Card>
-              <div style={{width: '398px'}}>
+              <div className="textContainer">
                 <span className="title">{card.title}</span>
                 <p className="description">{card.description}</p>
               </div>

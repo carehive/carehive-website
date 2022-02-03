@@ -14,8 +14,8 @@ import { ReactComponent as SvgDecoratorBlob1 } from "images/dot-pattern.svg"
 import HeroImage from '../../images/HeroImage.png'
 import { SliderButton } from "@typeform/embed-react";
 
-const Header = tw(HeaderBase)`max-w-none sm:px-8`; //lg:mx-20
-const Container = tw(ContainerBase)`bg-designs lg:-mx-8 sm:p-8 px-8`
+const Header = tw(HeaderBase)`max-w-none`; //lg:mx-20
+const Container = tw(ContainerBase)`bg-designs lg:-mx-8 p-8`
 const Row = tw.div`flex flex-col lg:flex-row justify-between items-center lg:pt-16 max-w-screen-2xl mx-auto sm:px-8`; //sm:px-8
 const Column = tw.div``;
 const TextColumn = tw(Column)`mr-auto lg:mr-0 max-w-lg lg:max-w-xl xl:max-w-2xl`;
@@ -35,9 +35,10 @@ const ImageDecoratorBlob = styled(SvgDecoratorBlob1)`
 `;
 const Testimonial = tw.div`max-w-lg rounded-b md:rounded-none relative sm:absolute bottom-0 inset-x-0 z-20 px-8 py-6 sm:px-10 sm:py-8 text-gray-900 font-medium transform md:translate-x-32 md:translate-y-24 text-sm leading-relaxed md:-mr-16 xl:mr-0` //bg-green-400
 const QuotesLeftIcon = tw(QuotesLeftIconBase)`w-8 h-8 md:w-4 md:h-4 absolute top-auto left-0 text-gray-100 md:text-blue-500 transform translate-x-1  md:-translate-y-5 opacity-10 md:opacity-100` //md:-translate-x-1/2
-const Quote = tw.blockquote`right-0`
+const Quote = tw.blockquote`right-0 sm:left-0`
 const CustomerName = tw.p`mt-4 font-bold`
 const CustomerCompany = tw.p`mt-1 text-sm text-gray-300`
+const Link = tw.a`border-b-2 border-transparent hocus:border-gray-700 pb-1 transition duration-300`;
 //https://images.pexels.com/photos/6098065/pexels-photo-6098065.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
 //https://images.unsplash.com/photo-1579165466949-3180a3d056d5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c21pbGluZyUyMGJsYWNrJTIwbWVkaWNhbCUyMGRvY3RvcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60
 //<button data-tf-slider="vyw0LRNz" data-tf-width="550" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:22px;border-radius:27px;padding:0 36px;font-weight:bold;height:55px;cursor:pointer;line-height:55px;text-align:center;margin:0;text-decoration:none;">Launch me</button><script src="//embed.typeform.com/next/embed.js"></script>
@@ -56,26 +57,26 @@ export default ({
   }
 }) => {
   const buttonRoundedCss = buttonRounded && tw`rounded-full`;
-  const navLinks = [
-    <NavLinks key={1}>
-      <NavLink >
-        Solutions
-      </NavLink>
-      <NavLink>
-        Products
-      </NavLink>
-      <NavLink>
-        Resources
-      </NavLink>
-      <NavLink>
-        About
-      </NavLink>
-    </NavLinks>
-  ];
+  // const navLinks = [
+  //   <NavLinks key={1}>
+  //     <NavLink >
+  //       <Link>Solutions</Link>
+  //     </NavLink>
+  //     <NavLink>
+  //       <Link>Products</Link>
+  //     </NavLink>
+  //     <NavLink>
+  //       Resources
+  //     </NavLink>
+  //     <NavLink>
+  //       About
+  //     </NavLink>
+  //   </NavLinks>
+  // ];
   return (
     <>
-    <Container>
-      <Header links={navLinks}/>
+    <Container id="about">
+      <Header/>
         <ContentWithVerticalPadding>
           <Row>
             <TextColumn>
@@ -92,7 +93,7 @@ export default ({
                 <Image src={HeroImage} />
                 {imageDecoratorBlob && <ImageDecoratorBlob />}
                 <Testimonial>
-                  <QuotesLeftIcon/>
+                  <QuotesLeftIcon style={{color: '#85CEE4'}}/>
                   <Quote>{testimonial.quote}</Quote>
                   {/*<CustomerName>{testimonial.customerName}</CustomerName>
                   <CustomerCompany>{testimonial.customerCompany}</CustomerCompany>*/}

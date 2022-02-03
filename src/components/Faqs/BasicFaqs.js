@@ -15,7 +15,7 @@ const Subheading = tw(SubheadingBase)`mb-4 text-center text-green-600`;
 const Heading = tw(SectionHeading)`w-full`;
 const Description = tw(SectionDescription)`w-full text-center`;
 
-const Column = tw.div`flex flex-col items-center px-2`;
+const Column = tw.div`flex flex-col items-center px-8`;
 const HeaderContent = tw.div``;
 const Container = tw(ContainerBase)`bg-designs2 -mx-8 p-8`
 
@@ -85,7 +85,7 @@ export default ({
   };
 
   return (
-    <Container style={{backgroundColor: '#DBF1F2'}}>
+    <Container id="faqs" style={{backgroundColor: '#DBF1F2'}}>
       <ContentWithPaddingXl>
         <Column>
           <HeaderContent>
