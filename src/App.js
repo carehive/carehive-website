@@ -15,15 +15,26 @@ import Subscription from "components/Waitlist/subscription"
 
 function App() {
   return (
+    <div>
     <AnimationRevealPage>
-    <Hero />
-    <Features/>
-    <MoreFeatures/>
-    {/*<Testimony/>
-    <Cta/>*/}
-    <Faqs/>
-    <Footer/>
-  </AnimationRevealPage>
+      <Hero />
+    </AnimationRevealPage>
+    <AnimationRevealPage>
+      <Features/>
+    </AnimationRevealPage>
+    <AnimationRevealPage>
+      <MoreFeatures/>
+    </AnimationRevealPage>
+      {/*<Testimony/>
+      <Cta/>*/}
+    <AnimationRevealPage>  
+      <Faqs/>
+    </AnimationRevealPage>
+    <AnimationRevealPage>
+      <Footer/>
+    </AnimationRevealPage>
+  
+  </div>
   );
 }
 

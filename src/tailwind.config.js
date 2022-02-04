@@ -15,6 +15,7 @@ module.exports = {
       designs: 'rgba(147, 228, 133, 0.05)',
       designs1: '#EDFFFF',
       designs2: '#DBF1F2',
+      designs3: '#5D5353',
 
       black: '#000',
       white: '#fff',

@@ -15,7 +15,7 @@ const Header = tw.header`
   max-w-screen-xl  
 `;//mx-auto
 
-export const NavLinks = tw.div`inline-block lg:mx-12`;
+export const NavLinks = tw.div`inline-block xl:mr-8`;//lg:mx-12
 
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
@@ -34,7 +34,7 @@ export const PrimaryLink = tw(NavLink)`
 `;
 
 export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0! xl:pl-10`};
+  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0! lg:pl-8 xl:pl-10`};
 
   img {
     ${tw`w-10 mr-3`}
@@ -72,10 +72,10 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">Solutions</NavLink>
+      <NavLink href="#build">Solutions</NavLink>
       <NavLink href="#products">Products</NavLink>
       <NavLink href="#faqs">Resources</NavLink>
-      <NavLink href="#about">About</NavLink>
+      <NavLink href="#footer">About</NavLink>
       {/*<NavLink href="/#" tw="lg:ml-12!">
         Login
   </NavLink>*/}
@@ -109,7 +109,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
           {links}
         </MobileNavLinks>
         <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
-          {showNavLinks ? <CloseIcon tw="w-6 h-6" /> : <MenuIcon tw="w-6 h-6" />}
+          {showNavLinks ? <CloseIcon tw="w-6 h-6 text-designs3" /> : <MenuIcon tw="w-6 h-6 text-designs3" />}
         </NavToggle>
       </MobileNavLinksContainer>
     </Header>

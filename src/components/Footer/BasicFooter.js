@@ -58,7 +58,7 @@ const SocialLink = styled.a`
 
 export default () => {
   return (
-    <Container style={{backgroundColor: '#F5FFFF'}}>
+    <Container id='footer' style={{backgroundColor: '#F5FFFF'}}>
       <Content>
         <SixColumns style={{textAlign: 'center'}}>
           <Column>
@@ -120,7 +120,7 @@ export default () => {
               </LinkListItem>
               <LinkListItem>
                 <SocialLinksContainer>
-                  <SocialLink style={{margin: 'auto', backgroundColor: '#1DA1F2'}} href="https://twitter.com">
+                  <SocialLink style={{margin: 'auto', backgroundColor: '#1DA1F2'}} href="https://twitter.com/">
                     <TwitterIcon />
                   </SocialLink>
                 </SocialLinksContainer>

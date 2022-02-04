@@ -6,7 +6,7 @@ import tw from "twin.macro";
 import { motion } from "framer-motion";
 import useInView from "use-in-view";
 
-const StyledDiv = tw.div`font-display min-h-screen text-secondary-500 overflow-hidden`;
+const StyledDiv = tw.div`font-display  text-secondary-500 overflow-hidden`; //min-h-screen
 function AnimationReveal({ disabled, children }) {
   if (disabled) {
     return <>{children}</>;
@@ -26,24 +26,18 @@ function AnimationReveal({ disabled, children }) {
 }
 
 function AnimatedSlideInComponent({ direction = "left", offset = 30, children }) {
-  const [ref, inView] = useInView(30);
+  const [ref, inView] = useInView(50);
 
   const x = { target: "0%" };
 
-  if (direction === "left") x.initial = "-150%";
-  else x.initial = "150%";
+  if (direction === "left") x.initial = "-100%";
+  else x.initial = "100%";
 
   return (
     <motion.section
       initial={{ x: x.initial }}
-      animate={{ 
-        x: inView && x.target,
-        transitionEnd:{
-          x: inView && 0
-        }
-      }}
-      transition={{ type: "spring", damping: 10 }}
-      ref={ref}
+      animate={{ x: '0%' }}
+      transition={{ ease: "easeInOut", duration: 1 }}
     >
       {children}
     </motion.section>
@@ -55,3 +49,15 @@ export default props => (
     <AnimationReveal {...props} />
   </StyledDiv>
 );
+/*
+initial={{ x: x.initial }}
+      animate={{ 
+        x: inView && x.target,
+        transitionEnd:{
+          x: inView && 0
+        }
+      }}
+      transition={{ type: "spring", damping: 10 }}
+      ref={ref}
+
+*/
