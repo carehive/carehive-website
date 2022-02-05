@@ -12,7 +12,7 @@ import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3
 
 const Container = tw.div`relative text-gray-700 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
-const SixColumns = tw.div`flex flex-col flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between lg:flex-row lg:px-20 xl:px-0 -mt-12`;
+const SixColumns = tw.div`flex flex-col flex-wrap text-left md:text-center sm:text-left justify-center sm:justify-start md:justify-between lg:flex-row lg:px-20 xl:px-0 -mt-12`;
 
 const Column = tw.div`px-4 sm:px-0 sm:w-1/4 md:w-auto mt-12`;
 
@@ -33,7 +33,7 @@ const Divider = tw.div`my-16 border-b-2 border-gray-300 w-full`;
 
 const ThreeColRow = tw.div`flex flex-col md:flex-row items-center justify-between`;
 
-const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
+const LogoContainer = tw.div`flex items-center justify-center md:justify-start sm:block md:hidden pb-8`;
 const LogoImg = tw.img`w-8`;
 const LogoText = tw.h5`ml-2 text-xl font-black tracking-wider text-gray-800`;
 
@@ -48,7 +48,7 @@ const TopDecoratorBlob = styled(SvgDecoratorBlob3)`
 `;
 
 
-const SocialLinksContainer = tw.div`mt-8 md:mt-0 flex`;
+const SocialLinksContainer = tw.div`mt-8 md:mt-0 flex hidden md:flex`;
 const SocialLink = styled.a`
   ${tw`cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0`}
   svg {
@@ -60,7 +60,7 @@ export default () => {
   return (
     <Container id='footer' style={{backgroundColor: '#F5FFFF'}}>
       <Content>
-        <SixColumns style={{textAlign: 'center'}}>
+        <SixColumns>
           <Column>
             <ColumnHeading>Our Solutions</ColumnHeading>
             <LinkList>
@@ -120,7 +120,7 @@ export default () => {
               </LinkListItem>
               <LinkListItem>
                 <SocialLinksContainer>
-                  <SocialLink style={{margin: 'auto', backgroundColor: '#1DA1F2'}} href="https://twitter.com/">
+                  <SocialLink style={{margin: 'auto', backgroundColor: '#1DA1F2'}} href="https://twitter.com/thecarehive">
                     <TwitterIcon />
                   </SocialLink>
                 </SocialLinksContainer>
@@ -143,10 +143,11 @@ export default () => {
         {/*<Divider />*/}
         
         <ThreeColRow style={{margin: '8rem 0rem 0rem 0rem'}}>
-          {/*<LogoContainer>
-            <LogoImg src={LogoImage} />
-            <LogoText>CareHive</LogoText>
-          </LogoContainer>*/}
+          <LogoContainer>
+            <SocialLink style={{margin: 'auto', backgroundColor: '#1DA1F2'}} href="https://twitter.com/thecarehive">
+              <TwitterIcon />
+            </SocialLink>
+          </LogoContainer>
           <CopywrightNotice style={{margin: 'auto'}}>&copy; 2022 CareHive Africa. All Rights Reserved.</CopywrightNotice>
           {/*<SocialLinksContainer>
             <SocialLink href="https://facebook.com">
